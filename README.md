@@ -7,7 +7,7 @@
   - Md Owais(IMT2022102, Mohammad.Owais@iiitb.ac.in)
 - **Clone GitHub Repository** :
   ```
-  https://github.com/Owais-Md/VR_Project1_Aryan_Owais_IMT2022102_IMT2022502.git
+  https://github.com/Owais-Md/VR_Project_IMT2022_102_502.git
   ```
 - Files:
   - **BinaryClassification.ipynb** : Tasks A and B.
