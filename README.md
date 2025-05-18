@@ -22,6 +22,7 @@
   - `vilt-baseline.ipynb` – Evaluation of the pre-trained ViLT model.  
   - `vilt-finetuning.ipynb` – Evaluation of the LoRA-fine-tuned ViLT model.  
   - `requirements.txt` – Environment specs for both notebooks.
+  - NOTE: Refer the notebooks for the respective results.
 
 - **blipvqa baseline and finetuned/**  
   - `requirements.txt` – Shared dependencies for all subfolders.  
