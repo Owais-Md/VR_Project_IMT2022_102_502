@@ -1,0 +1,16 @@
+accelerate
+datasets
+bitsandbytes
+pandas
+scipy
+scikit-learn
+scikit-image
+torch
+torchvision
+torchtext
+torchmetrics
+tqdm
+argparse
+Pillow
+transformers==4.40.1
+peft==0.10.0
