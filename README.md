@@ -31,11 +31,12 @@
   - **Subfolders** (`blip-vqa-r5-e7/`, `blipvqa-r16-e5/`, …) each contain:  
     - `notebook.ipynb` – Model training/fine-tuning for that experiment.  
     - `results/` – Output folder with saved model weights (from `trainer.save_model()`) and logs.
+    - *Note:* each notebook uses `requirements.txt` from the root.
 
 - **DataFiltration/**  
   - `filter.py` – Splits the raw ABO dataset into subfolders `S1`–`S6`.  
   - `curate.py` – Generates VQA QA-pair CSVs for a given subfolder using a Gemini API key.  
-  - *Note:* Both scripts use `requirements.txt` from the root.
+  - Both scripts use the `requirements.txt` in the directory.
 
 - **IMT2022102_IMT2022502_inference_script/**  
   - `inference.py` – Final inference script as per project deliverables.  
