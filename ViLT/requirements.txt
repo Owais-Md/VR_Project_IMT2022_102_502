@@ -1,0 +1,11 @@
+transformers
+accelerate
+torch
+datasets
+peft
+bert-score
+scikit-learn
+timeout-decorator
+pandas
+pillow
+tqdm
