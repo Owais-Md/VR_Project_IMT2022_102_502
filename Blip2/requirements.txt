@@ -1,0 +1,6 @@
+torch
+torchvision
+transformers==4.44.2
+accelerate
+timeout-decorator
+scikit-learn
