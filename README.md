@@ -15,19 +15,19 @@
 - **Blip2/**  
   - `blip_vqa_predictions.csv` – Ground-truth vs. predicted answers.  
   - `blip_vqa_metrics.csv` – Computed metrics (Accuracy, F1, BERTScore) based on the predictions.  
-  - `notebook.ipynb` – Single notebook that runs inference and saves both CSVs.  
+  - `blip2.ipynb` – Single notebook that runs inference and saves both CSVs.  
   - `requirements.txt` – Dependencies to reproduce this analysis.
 
 - **ViLT/**  
-  - `baseline.ipynb` – Evaluation of the pre-trained ViLT model.  
-  - `finetuned.ipynb` – Evaluation of the LoRA-fine-tuned ViLT model.  
+  - `vilt-baseline.ipynb` – Evaluation of the pre-trained ViLT model.  
+  - `vilt-finetuning.ipynb` – Evaluation of the LoRA-fine-tuned ViLT model.  
   - `requirements.txt` – Environment specs for both notebooks.
 
-- **blipvqa/**  
+- **blipvqa baseline and finetuned/**  
   - `requirements.txt` – Shared dependencies for all subfolders.  
   - `Blip-vqa Baseline Code.ipynb` – Runs and logs baseline BLIP VQA Base evaluation.  
   - `evaluating-finetuned-model.ipynb` – Evaluates the LoRA-fine-tuned BLIP VQA Base.  
-  - **Subfolders** (`experiment_1/`, `experiment_2/`, …) each contain:  
+  - **Subfolders** (`blip-vqa-r5-e7/`, `blipvqa-r16-e5/`, …) each contain:  
     - `notebook.ipynb` – Model training/fine-tuning for that experiment.  
     - `results/` – Output folder with saved model weights (from `trainer.save_model()`) and logs.
 
