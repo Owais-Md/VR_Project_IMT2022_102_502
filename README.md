@@ -12,20 +12,36 @@
  
 ## Folder Structure
 
-Folder: Blip 2 has: a single ipynb, and 2 csvs, blip_vqa_predictions.csv with the ground truths and predicted values, and blip_vqa_metrics.csv with the metrics calculated on the previous csv
-and has requirments.txt
+- **Blip2/**  
+  - `blip_vqa_predictions.csv` – Ground-truth vs. predicted answers.  
+  - `blip_vqa_metrics.csv` – Computed metrics (Accuracy, F1, BERTScore) based on the predictions.  
+  - `notebook.ipynb` – Single notebook that runs inference and saves both CSVs.  
+  - `requirements.txt` – Dependencies to reproduce this analysis.
 
-Folder: ViLT has: 2 python notebooks for both baseline and finetuned models(results can  be seen in the notebook), and has requirments.txt
+- **ViLT/**  
+  - `baseline.ipynb` – Evaluation of the pre-trained ViLT model.  
+  - `finetuned.ipynb` – Evaluation of the LoRA-fine-tuned ViLT model.  
+  - `requirements.txt` – Environment specs for both notebooks.
 
-Folder: blipvqa baseline and finetuned: one requirments.txt, Blip-vqa Baseline Code.ipynb, which does evaluation of baseline blip-vqa model and stores results in the ipynb itself, and evaluating-finetuned-model.ipynb, which evaluates the finetuned model.
+- **blipvqa/**  
+  - `requirements.txt` – Shared dependencies for all subfolders.  
+  - `Blip-vqa Baseline Code.ipynb` – Runs and logs baseline BLIP VQA Base evaluation.  
+  - `evaluating-finetuned-model.ipynb` – Evaluates the LoRA-fine-tuned BLIP VQA Base.  
+  - **Subfolders** (`experiment_1/`, `experiment_2/`, …) each contain:  
+    - `notebook.ipynb` – Model training/fine-tuning for that experiment.  
+    - `results/` – Output folder with saved model weights (from `trainer.save_model()`) and logs.
 
-The subfolders in blipvqa, each have one ipynb and a results folder, where the ipynb dependencies are the same as the requirements.txt folder outside. Running the notebooks gives the output result folder, which has the finetuned model weights and parameters from the trainer.save_model().
+- **DataFiltration/**  
+  - `filter.py` – Splits the raw ABO dataset into subfolders `S1`–`S6`.  
+  - `curate.py` – Generates VQA QA-pair CSVs for a given subfolder using a Gemini API key.  
+  - *Note:* Both scripts use `requirements.txt` from the root.
 
-Folder: DataFiltration has filter.py and curate.py which have requirements from the requirement.txt
-running filter.py in a folder with the extracted dataset, will create the subfolders S1-S6 as mentioned in the report, and running curate.py with a Gemini API key and subfolder name specified generates the required vqa pairs csv.
+- **IMT2022102_IMT2022502_inference_script/**  
+  - `inference.py` – Final inference script as per project deliverables.  
+  - `requirements.txt` – Dependencies for running inference.
 
-Folder: IMT2022102_IMT2022502_inference_script has the inference.py and requirements.txt as asked in project deliverables.
+- **Dataset.csv**  
+  - The merged, trimmed CSV of subfolders `S1`–`S6`, containing the final VQA pairs used throughout.
 
-Dataset.csv is the combined trim of the subfolders S1 to S6, which is basically the final dataset of VQA Pairs that was used for the entire project.
-
-VR_project_report.pdf is the detailed report for the project.
+- **VR_project_report.pdf**  
+  - The complete project report, including methodology, results, and analysis.
